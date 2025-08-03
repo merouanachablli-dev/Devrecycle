@@ -1,1 +1,172 @@
 
+body {
+    background-color: #0d1117; /* لون الخلفية الأزرق الداكن */
+    color: #c9d1d9; /* لون النص الفاتح */
+    font-family: Arial, sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+
+.header {
+    width: 100%;
+    padding: 0 20px;
+}
+
+.balance-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.balance-header {
+    display: flex;
+    align-items: center;
+}
+
+.small-icon {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+}
+
+.drc-value {
+    font-size: 3em;
+    font-weight: bold;
+    color: #238636; /* اللون الأخضر */
+}
+
+.drc-unit {
+    font-size: 1.5em;
+    margin-right: 5px;
+}
+
+.drc-points {
+    font-size: 0.8em;
+    color: #6a737d;
+}
+
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.tap-to-earn {
+    position: relative;
+}
+
+.main-recycling-icon {
+    width: 250px;
+    height: 250px;
+    cursor: pointer;
+}
+
+.hand-tap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hand-icon {
+    width: 80px;
+    height: 80px;
+    animation: tap-animation 0.8s infinite;
+}
+
+.bonus-points {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #238636;
+    font-size: 2em;
+    font-weight: bold;
+    opacity: 0;
+    animation: fly-up 1s forwards;
+}
+
+@keyframes tap-animation {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(0.9); }
+}
+
+@keyframes fly-up {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.conversion-rate {
+    font-size: 1em;
+    color: #6a737d;
+    margin-bottom: 10px;
+}
+
+.wallet-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #238636;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 80%;
+}
+
+.button-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background-color: #161b22; /* لون شريط التنقل */
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #6a737d;
+    text-decoration: none;
+    font-size: 0.8em;
+}
+
+.nav-item img {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 5px;
+}
